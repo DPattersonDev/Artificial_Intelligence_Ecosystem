@@ -1,7 +1,6 @@
-### Top-3 Predictions
-
-After running the classifier on `blueberry.jpg`, the model produced the following top three predictions:
-
-1. **radiator** - **33.18%**
-2. **sliding_door** - **25.27%**
-3. **hognose_snake** - **2.23%**
+tensorflow
+numpy
+keras
+pillow
+matplotlib
+opencv-python

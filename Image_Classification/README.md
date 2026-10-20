@@ -18,23 +18,13 @@ The main parts of the program made sense to me because I have prior programming 
 
 ### Top-3 Predictions
 
-Run:
+After running the classifier on `blueberry.jpg`, the model produced the following results:
 
-```bash
-python3 base_classifier.py
-```
+1. **radiator** - **33.18%**
+2. **sliding_door** - **25.27%**
+3. **hognose_snake** - **2.23%**
 
-Then enter:
-
-```text
-blueberry.jpg
-```
-
-Record the results here after running the classifier:
-
-1. **Prediction 1:** _To be recorded_
-2. **Prediction 2:** _To be recorded_
-3. **Prediction 3:** _To be recorded_
+The classifier did not identify Blueberry as a cat, which shows how strongly the surrounding environment can influence an image classification model.
 
 ### Grad-CAM
 
@@ -46,9 +36,9 @@ The resulting file is saved automatically as:
 
 ### Heatmap Observations
 
-_To be completed after running the classifier._
+The Grad-CAM results suggest that the model focused more strongly on parts of the background and surrounding shapes than on Blueberry herself. This makes sense because the top predictions were "radiator" and "sliding_door," which are both related to objects or structures in the environment rather than the cat.
 
-I will compare whether the strongest Grad-CAM areas appear around Blueberry's face, ears, body, clothing, or parts of the background. This will help show which visual features contributed most strongly to the model's prediction.
+The result shows that image classifiers can sometimes be distracted by the setting of an image and may not correctly identify the main subject when the background contains strong visual features.
 
 ---
 
@@ -81,7 +71,9 @@ The final output is saved as:
 
 ### Filter Observations
 
-The storybook filter keeps the subject recognizable while making the colors stronger and simplifying fine details. The edge processing adds a lightly drawn appearance, especially around Blueberry's face, clothing, and body. Compared with the blur filter, the custom filter changes the style of the image rather than simply reducing detail.
+The storybook filter keeps the subject recognizable while making the colors stronger and simplifying fine details. The edge processing adds a lightly drawn appearance, especially around Blueberry's face, clothing, and body.
+
+Compared with the blur filter, the custom filter changes the style of the image rather than simply reducing detail.
 
 ---
 
@@ -89,9 +81,13 @@ The storybook filter keeps the subject recognizable while making the colors stro
 
 This project helped me understand the difference between using a pretrained image classifier and directly processing image pixels with filters. MobileNetV2 analyzes patterns learned from ImageNet training data and produces confidence scores for classes that it believes are present in the image. Grad-CAM makes that process easier to interpret because it creates a visual representation of which regions had the greatest influence on the model's prediction.
 
+In my test image, the classifier did not identify Blueberry as a cat. Instead, its highest predictions were "radiator" and "sliding_door." This helped me understand that an image classifier can sometimes focus more on the surrounding environment than on the subject a person expects it to recognize. The Grad-CAM heatmap made that behavior easier to examine because it showed which areas of the image contributed most strongly to the prediction.
+
 Working with AI was especially useful when adding Grad-CAM because that required TensorFlow concepts that were less familiar to me, such as gradients, convolutional feature maps, and `GradientTape`. I still needed to understand how the code connected to the existing classifier rather than simply copying it. AI also helped explain the starter blur filter and design the storybook filter.
 
-One challenge was keeping the changes understandable instead of adding unnecessary complexity. For the custom filter, I wanted an effect that was visibly different from the original but still easy to explain. Combining smoothing, posterization, color changes, and edge detection produced a noticeable result while using straightforward Pillow operations. Overall, the project showed me how AI can help with both understanding unfamiliar code and iteratively developing new features while I still make decisions about the final design and evaluate the results.
+One challenge was keeping the changes understandable instead of adding unnecessary complexity. For the custom filter, I wanted an effect that was visibly different from the original but still easy to explain. Combining smoothing, posterization, color changes, and edge detection produced a noticeable result while using straightforward Pillow operations.
+
+Overall, the project showed me how AI can help with both understanding unfamiliar code and iteratively developing new features while I still make decisions about the final design and evaluate the results.
 
 ---
 

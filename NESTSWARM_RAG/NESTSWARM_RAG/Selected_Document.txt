@@ -1,0 +1,106 @@
+NESTSWARM – Game Design Source Document
+
+Overview
+NESTSWARM is a 2D auto-battler game being developed in Godot 4. The player’s main role is to build a team, position units, choose upgrades, and create useful synergies. Combat itself is automatic, so the player’s skill is expressed through planning and decisions before and between rounds.
+
+The game is planned to support both 1v1 and 4v4 modes. Matches are intended to be relatively short and replayable. The current roster contains ten designed units, with a long-term goal of expanding toward twenty units.
+
+Factions
+
+Vesper
+The Vesper faction currently includes:
+- Veyra
+- Zekrin
+- Melora
+- Tharos
+- Aurex
+
+Anttalope
+The Anttalope faction currently includes:
+- Kaelor
+- Syrra
+- Droven
+- Nyxis
+- Velkara
+
+Units and Team Building
+Players choose units to create a team before combat begins. Unit selection matters because different combinations can create stronger or weaker team strategies. The design is intended to reward experimentation instead of encouraging the player to use one fixed team every match.
+
+Synergies are an important part of team building. A synergy is created when certain units or faction combinations work well together. The purpose of synergies is to make team composition matter beyond the individual strength of a single character.
+
+Veyra is one of the primary characters currently being used during combat and animation development.
+
+Combat System
+Combat is automatic once a round begins. Players do not manually control every attack. Instead, they make strategic decisions such as:
+- selecting units,
+- positioning units,
+- building synergies,
+- choosing upgrades,
+- adapting to the opponent.
+
+The goal is to make preparation and decision-making the main source of player skill.
+
+Round Structure
+A match is expected to last approximately five to seven rounds.
+
+Each round includes:
+1. Team preparation.
+2. Unit positioning and setup.
+3. Automatic combat.
+4. Round result.
+5. One upgrade choice before the next round.
+
+After each round, the player receives one upgrade choice that can improve a unit, team strategy, or synergy.
+
+The upgrade choice is intended to create meaningful differences between matches. A player may strengthen an individual unit, improve a broader team strategy, or increase the effectiveness of a synergy.
+
+The player should not be able to rely on exactly the same upgrade path every game. Instead, the available options should encourage adaptation.
+
+Game Modes
+
+1v1 Mode
+In 1v1 mode, one player competes against one opponent. The mode emphasizes direct team-building decisions, counterplay, positioning, and efficient upgrade choices.
+
+4v4 Mode
+The 4v4 mode expands the battle by allowing larger groups of units. It places greater emphasis on team composition, overlapping synergies, and battlefield positioning.
+
+The game is planned to support both 1v1 and 4v4 modes.
+
+Progression and Replayability
+Replayability is a major design goal. The combination of unit selection, synergies, upgrades, and short round structures is intended to create different strategies across matches.
+
+Because upgrades can vary between rounds and players can build different teams, the player should have reasons to adapt rather than repeat the exact same strategy every time.
+
+Monetization
+Two monetization approaches have been considered:
+- a one-time purchase around $6, or
+- a free-to-play model supported by cosmetic purchases.
+
+The preferred direction should avoid pay-to-win mechanics. Competitive strength should come from player decisions, team construction, positioning, and adaptation rather than spending money for stronger units.
+
+Development Priorities
+Current development priorities include:
+- completing core combat behavior,
+- improving unit animations,
+- expanding the roster from ten units toward twenty,
+- building and balancing synergies,
+- refining upgrades,
+- improving 1v1 and 4v4 match flow,
+- testing replayability and balance.
+
+The project is still in development, so some systems may change as prototypes are tested.
+
+Design Philosophy
+NESTSWARM is intended to be easy to understand at a basic level while still allowing strategic depth. Players should be able to understand what is happening during combat without manually controlling every attack.
+
+The design avoids requiring players to manually control every attack. Instead, the player’s skill is expressed through planning and decision-making before and between rounds.
+
+The game should reward:
+- smart team construction,
+- positioning,
+- synergy building,
+- adaptation,
+- upgrade decisions,
+- learning from previous rounds.
+
+The current design does not identify one character as objectively “the best.” Character value depends on team composition, synergies, positioning, upgrades, and balance changes during development.
